@@ -1,14 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyecto_fundamentos;
-
-/**
- *
- * @author EQUIPO
- */
 public class Sensor {
     public static Sensor[][] sensores;
     private int estado;
@@ -42,7 +32,7 @@ public class Sensor {
                     if(sensores[i][j].getEstado()==0){
                         int piso=i;
                         int espacio=j;
-                        concat=("Piso: "+piso+"Espacio: "+espacio+", ")+concat;
+                        concat=("Piso: "+piso+" Espacio: "+espacio+", ")+concat;
                     }
                 }
             }
@@ -55,7 +45,7 @@ public class Sensor {
             for(int j=0;j<sensores[i].length;j++){
                 int piso=i;
                 int espacio=j;
-                concat=("Piso: "+piso+"Espacio: "+espacio+"Estado: "+sensores[i][j].getEstado())+concat;
+                concat=(" Piso: "+piso+" Espacio: "+espacio+" Estado: "+sensores[i][j].toString())+"  "+concat;
                     }
                 }
         return concat;
