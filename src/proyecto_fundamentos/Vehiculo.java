@@ -1,5 +1,6 @@
 package proyecto_fundamentos;
 public class Vehiculo {
+    
     private String placa; 
     private String marca; 
     private String color; 
@@ -15,7 +16,7 @@ public class Vehiculo {
     }
  
     public Vehiculo(String p, String m, String c) {
-        this(p, m, c,30000000);    
+        this(p, m, c, 30000000);    
     }
  
     public Vehiculo(String p, String m, String c, int v) {
