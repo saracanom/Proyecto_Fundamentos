@@ -30,7 +30,7 @@ public class Vehiculo {
           this.valorComercial = 30000000;
         }
  
-        cantidad = cantidad + 1; 
+        cantidad++; 
     }
  
     public void setPlaca(String p) {
@@ -70,72 +70,77 @@ public class Vehiculo {
     }
  
     public String toString() {
-        String informacion1 = "Placa: " + this.placa + ", Marca: " + this.marca;
-        String informacion2 =  ", Color: " + this.color + ", Valor Comerical: " + this.valorComercial;
+        String informacion1 = "{Placa: " + this.placa + ", Marca: " + this.marca;
+        String informacion2 =  ", Color: " + this.color + ", Valor Comerical: " + this.valorComercial + "}";
         String informacionCompleta = informacion1 + informacion2;
         return informacionCompleta;
     }
  
     public static String toStringVehiculos() {
- 
-        int i, j; 
-        String infoTodos = "Información Vehiculos: "; 
-        for (i = 0; i < vehiculos.length; i++) {
-            for (j = 0; j < vehiculos[i].length; j ++) {
+        String infoTodos = "Información Vehículos:"; 
+        for (int i = 0; i < vehiculos.length; i++) {
+            for (int j = 0; j < vehiculos[i].length; j ++) {
  
                 if (vehiculos [i][j] != null) {
-                    String infoIndividual = "{" + vehiculos[i][j].toString() + "}";
+                    String infoIndividual = " " + vehiculos[i][j].toString();
                     infoTodos = infoTodos + infoIndividual; 
                 }
- 
             }
         }
+        
+        if (infoTodos.equals("Información Vehículos:")) {
+            infoTodos = "No hay ningún vehículo en el parqueadero"; }
  
         return infoTodos; 
- 
-        }
+    }
  
     public static int cantidadVehiculos() {
         return cantidad; 
     }
-    public static String vehiculosMismoColor(String color){
-        String colorIgual = "Vehículos con el color " + color + ":";
+    
+    public static String vehiculosMismoColor(String c){
+        String colorIgual = "Vehículos con el color " + c + ":";
         for (int i = 0; i < vehiculos.length; i++) {
             for (int j = 0; j < vehiculos[i].length; j ++) {
  
-                if (vehiculos[i][j] != null && color.equalsIgnoreCase(vehiculos[i][j].getColor())) {
+                if (vehiculos[i][j] != null && c.equals(vehiculos[i][j].getColor())) {
                     String infoIndividual = " " + vehiculos[i][j].toString();
                     colorIgual = colorIgual + infoIndividual;    
                 } 
             }
         }
  
-        if(colorIgual.equals("Vehículos con el color " + color + ":")) {
+        if(colorIgual.equals("Vehículos con el color " + c + ":")) {
             colorIgual = colorIgual + " Ninguno"; }
  
         return colorIgual;
     }
-    public static Vehiculo[] mostrarValorComercial(){
-        Vehiculo temp = new Vehiculo();
+    
+    public static Vehiculo[] valoresOrdenados(int cantidadActual){
+        Vehiculo[] ordenValor = new Vehiculo[cantidadActual];
         int k = 0;
-        int filas = Vehiculo.vehiculos.length;
-        int columnas = Vehiculo.vehiculos[0].length;
-        Vehiculo[] ordenValor = new Vehiculo[filas*columnas];
-        for (int i = 0; i < filas; i++)
-            for (int j = 0; j < columnas; j++)
-                ordenValor[k++] = Vehiculo.vehiculos[i][j];
-
-        for(int i = 1; i<ordenValor.length ; i++){
-            for(int j = 0; j<(ordenValor.length -1); j++){
-                    if(ordenValor[j]!=null && ordenValor[j+1]!=null && ordenValor[j].getValorComercial()>ordenValor[j+1].getValorComercial()){
-                    temp = ordenValor[j];
-                    ordenValor[j] = ordenValor[j+1];
-                    ordenValor[j+1] = temp;
-                    }else{
-                        continue;
-                    }
+        
+        for (int i = 0; i < vehiculos.length; i++) {
+            for (int j = 0; j < vehiculos[i].length; j++) { 
+                
+                if(vehiculos[i][j] != null){
+                    ordenValor[k] = vehiculos[i][j];
+                    k++; 
+                }
             }
         }
+        
+        Vehiculo temp = new Vehiculo();
+        
+        for(int i = 0; i < (ordenValor.length -1); j++){
+             if(ordenValor[i].getValorComercial() > ordenValor[i+1].getValorComercial()){
+                temp = ordenValor[i];
+                ordenValor[i] = ordenValor[i+1];
+                ordenValor[i+1] = temp; 
+            }
+        }
+        
         return ordenValor;
     }
+   
 }
