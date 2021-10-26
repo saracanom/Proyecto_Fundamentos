@@ -22,7 +22,7 @@ public class Principal {
         }
  
         for (int i = 0; i < pisos; i++) {
-            for (int j = 0; j < espacios; j ++) {
+            for (int j = 0; j < espacios; j++) {
                 Sensor S = new Sensor(0); 
                 Sensor.sensores[i][j] = S;  
             }
@@ -72,7 +72,7 @@ public class Principal {
                         
                         if(piso < pisos && espacio < espacios && piso >= 0 && espacio >= 0){
                             
-                            if(Sensor.sensores[piso][espacio].getEstado()==1){
+                            if(Sensor.sensores[piso][espacio].getEstado() == 1){
                                 System.out.println("Este espacio está ocupado. No se puede parquear");
                                 
                             } else {
@@ -114,7 +114,7 @@ public class Principal {
                         
                         if(piso2 < pisos && espacio2 < espacios && piso2 >= 0 && espacio2 >= 0){
                             
-                            if(Sensor.sensores[piso2][espacio2].getEstado()==1) {
+                            if(Sensor.sensores[piso2][espacio2].getEstado() == 1) {
                                 System.out.println("Este espacio está ocupado. No se puede parquear");
                                 
                             } else {
