@@ -189,7 +189,7 @@ public class Principal {
                         case 9:
                             String orden = "Vehículos ordenados por valor comercial:";
                             for(int i = 0; i < Vehiculo.valoresOrdenados(Vehiculo.cantidad).length ; i++){
-                                orden = orden + Vehiculo.valoresOrdenados(Vehiculo.cantidad)[i].toString();
+                                orden = orden + " " + Vehiculo.valoresOrdenados(Vehiculo.cantidad)[i].toString();
                             }
                         
                             if (orden.equals("Vehículos ordenados por valor comercial:")) {
