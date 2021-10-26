@@ -1,53 +1,76 @@
 package proyecto_fundamentos;
 public class Sensor {
+    
     public static Sensor[][] sensores;
     private int estado;
+    
+    
     public Sensor(){
         
     }
+    
     public Sensor(int e){
-        this.estado = e;
+        if (e == 1 || e == 0){
+            this.estado = e; 
+        } else {
+            this.estado = 0; 
+        }
     }
 
     public int getEstado() {
         return estado;
     }
 
-    public void setEstado(int estado) {
-        this.estado = estado;
-    }
-    public String toString(){
-        if(estado == 1){
-            return "Ocupado";
-        } else if (estado == 0) {
-            return "Libre";
+    public void setEstado(int e) {
+        if (e == 1 || e == 0){
+            this.estado = e; 
+        } else {
+            this.estado = 0;
         }
-        return "Libre";
     }
-        public static String sensorLibre(){
-        String concat="";
-        for(int i=0;i<sensores.length; i++){
-            for(int j=0;j<sensores[i].length;j++){
-                if(sensores[i][j]!= null){
-                    if(sensores[i][j].getEstado()==0){
-                        int piso=i;
-                        int espacio=j;
-                        concat=("Piso: "+piso+" Espacio: "+espacio+", ")+concat;
-                    }
+    
+    public String toString() {
+        String estadoActual = ""
+        if(this.estado == 1){
+            estadoActual = "Ocupado";
+        } else if (this.estado == 0) {
+            estadoActual = "Libre";
+        }
+        return estadoActual;
+    }
+    
+    public static String sensorLibre(){
+        String concat = "Sensores Libres:";
+        for(int i = 0; i < sensores.length; i++){
+            for(int j = 0; j < sensores[i].length; j++){
+                
+                if(sensores[i][j]!= null && sensores[i][j].getEstado()== 0){
+                    String infoIndividual = " {Piso: " + i + ", Espacio: " + j + "}"
+                    concat = concat + infoIndividual;
                 }
-            }
+             }
+         }
+        
+        if(concat.equals("Sensores Libres:")) {
+            concat = concat + " Ninguno. Parqueadero Lleno";
         }
+        
         return concat;
     }
+    
     public static String sensorEstado(){
-        String concat="";
-        for(int i=0;i<sensores.length; i++){
-            for(int j=0;j<sensores[i].length;j++){
-                int piso=i;
-                int espacio=j;
-                concat=(" Piso: "+piso+" Espacio: "+espacio+" Estado: "+sensores[i][j].toString())+"  "+concat;
-                    }
+        String concat= = "Información de todos los sensores:";
+        for(int i = 0; i < sensores.length; i++){
+            for(int j = 0; j < sensores[i].length; j++){
+                
+                if (sensores[i][j]!= null) {
+                    String infoIndividual = " {Piso: " + i + ", Espacio: " + j + ", Estado: " + sensores[i][j].toString() + "}";
+                    concat = concat + infoIndividual; 
                 }
+             }
+        }
+                
         return concat;
-            }
+    }
+    
 }
