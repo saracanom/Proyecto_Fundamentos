@@ -30,7 +30,7 @@ public class Sensor {
     }
     
     public String toString() {
-        String estadoActual = ""
+        String estadoActual = "";
         if(this.estado == 1){
             estadoActual = "Ocupado";
         } else if (this.estado == 0) {
@@ -45,7 +45,7 @@ public class Sensor {
             for(int j = 0; j < sensores[i].length; j++){
                 
                 if(sensores[i][j]!= null && sensores[i][j].getEstado()== 0){
-                    String infoIndividual = " {Piso: " + i + ", Espacio: " + j + "}"
+                    String infoIndividual = " {Piso: " + i + ", Espacio: " + j + "}";
                     concat = concat + infoIndividual;
                 }
              }
@@ -59,7 +59,7 @@ public class Sensor {
     }
     
     public static String sensorEstado(){
-        String concat= = "Información de todos los sensores:";
+        String concat = "Información de todos los sensores:";
         for(int i = 0; i < sensores.length; i++){
             for(int j = 0; j < sensores[i].length; j++){
                 
