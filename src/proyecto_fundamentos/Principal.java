@@ -30,7 +30,7 @@ public class Principal {
         
         Vehiculo.tamano = pisos*espacios;
         
-        System.out.println("Ingrese el numero de la acción que desea realizar:");
+        System.out.println("Ingrese el número de la acción que desea realizar:");
         System.out.println("1 - Mostrar sensores desocupados");
         System.out.println("2 - Parquear vehículo sin valor comercial");
         System.out.println("3 - Parquear vehículo con valor comercial");
