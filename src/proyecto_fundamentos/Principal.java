@@ -112,7 +112,7 @@ public class Principal {
                         int espacio2 = scan.nextInt();
                         System.out.println(" ");
                         
-                        if(piso2 < pisos && espacio2 < espacios && piso2 >= 0 && espacio2 > =0){
+                        if(piso2 < pisos && espacio2 < espacios && piso2 >= 0 && espacio2 >= 0){
                             
                             if(Sensor.sensores[piso2][espacio2].getEstado()==1) {
                                 System.out.println("Este espacio está ocupado. No se puede parquear");
