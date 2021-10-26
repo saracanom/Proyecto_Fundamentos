@@ -34,7 +34,7 @@ public class Principal {
         System.out.println("1 - Mostrar sensores desocupados");
         System.out.println("2 - Parquear vehículo sin valor comercial");
         System.out.println("3 - Parquear vehículo con valor comercial");
-        System.out.println("4 - Mostrar información de todos vehículos almacenados actualmente");
+        System.out.println("4 - Mostrar información de todos los vehículos almacenados actualmente");
         System.out.println("5 - Mostrar cantidad de vehículos actuales y disponibilidad del parqueadero");
         System.out.println("6 - Mostrar estado de un sensor específico");
         System.out.println("7 - Mostrar estado de todos los sensores");
