@@ -153,11 +153,11 @@ public class Principal {
                         
                         case 6:
                             System.out.println("Ingrese el piso del parqueadero que desea consultar:");
-                            System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
+                            System.out.println("Recuerde que los pisos van del 0 al " + (pisos-1));
                             int piso3 = scan.nextInt();
                             System.out.println(" ");
                             System.out.println("Ingrese el espacio del parqueadero que desea consultar:");
-                            System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
+                            System.out.println("Recuerde que los espacios van del 0 al " + (espacios-1));
                             int espacio3 = scan.nextInt();
                             System.out.println(" ");
                         
