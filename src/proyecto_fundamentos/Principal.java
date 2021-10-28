@@ -31,7 +31,7 @@ public class Principal {
         Vehiculo.tamano = pisos*espacios;
         
         System.out.println("Ingrese el número de la acción que desea realizar:");
-        System.out.println("1 - Mostrar sensores desocupados");
+        System.out.println("1 - Mostrar sensores libres");
         System.out.println("2 - Parquear vehículo sin valor comercial");
         System.out.println("3 - Parquear vehículo con valor comercial");
         System.out.println("4 - Mostrar información de todos los vehículos almacenados actualmente");
@@ -104,11 +104,11 @@ public class Principal {
                         }
                         
                         System.out.println("Ingrese el piso donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
+                        System.out.println("Recuerde que los pisos para parquear van del 0 al " + (pisos-1));
                         int piso2 = scan.nextInt();
                         System.out.println(" ");
                         System.out.println("Ingrese el espacio donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
+                        System.out.println("Recuerde que los espacios para parquear van del 0 al " + (espacios-1));
                         int espacio2 = scan.nextInt();
                         System.out.println(" ");
                         
