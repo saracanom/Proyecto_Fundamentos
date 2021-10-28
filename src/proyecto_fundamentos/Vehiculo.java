@@ -71,7 +71,7 @@ public class Vehiculo {
  
     public String toString() {
         String informacion1 = "{Placa: " + this.placa + ", Marca: " + this.marca;
-        String informacion2 =  ", Color: " + this.color + ", Valor Comerical: " + this.valorComercial + "}";
+        String informacion2 =  ", Color: " + this.color + ", Valor Comercial: " + this.valorComercial + "}";
         String informacionCompleta = informacion1 + informacion2;
         return informacionCompleta;
     }
