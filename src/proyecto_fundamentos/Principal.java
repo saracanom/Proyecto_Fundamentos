@@ -62,11 +62,11 @@ public class Principal {
                         }
                         
                         System.out.println("Ingrese el piso donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
+                        System.out.println("Recuerde que los pisos para parquear van del 0 al " + (pisos-1));
                         int piso = scan.nextInt();
                         System.out.println(" ");
                         System.out.println("Ingrese el espacio donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
+                        System.out.println("Recuerde que los espacios para parquear van del 0 al " + (espacios-1));
                         int espacio = scan.nextInt();
                         System.out.println(" ");
                         
