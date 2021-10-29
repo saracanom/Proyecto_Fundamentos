@@ -135,11 +135,11 @@ public class Principal {
                                 System.out.println("Vehículo parqueado en el piso " + piso2 + ", espacio " + espacio2 + ": " + Vehiculo.vehiculos[piso2][espacio2].toString());   
                             }
                             
-                        } else {
+                            } else {
                             System.out.println("Espacio o piso inválido");
-                        }
+                            }
                         
-                        break;
+                            break;
                         
                         case 4: 
                             System.out.println(Vehiculo.toStringVehiculos());
