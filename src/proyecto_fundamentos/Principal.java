@@ -22,7 +22,7 @@ public class Principal {
         }
  
         for (int i = 0; i < pisos; i++) {
-            for (int j = 0; j < espacios; j++) {
+            for (int j = 0; j < espacios; j ++) {
                 Sensor S = new Sensor(0); 
                 Sensor.sensores[i][j] = S;  
             }
@@ -30,11 +30,11 @@ public class Principal {
         
         Vehiculo.tamano = pisos*espacios;
         
-        System.out.println("Ingrese el número de la acción que desea realizar:");
-        System.out.println("1 - Mostrar sensores libres");
+        System.out.println("Ingrese el numero de la acción que desea realizar:");
+        System.out.println("1 - Mostrar sensores desocupados");
         System.out.println("2 - Parquear vehículo sin valor comercial");
         System.out.println("3 - Parquear vehículo con valor comercial");
-        System.out.println("4 - Mostrar información de todos los vehículos almacenados actualmente");
+        System.out.println("4 - Mostrar información de todos vehículos almacenados actualmente");
         System.out.println("5 - Mostrar cantidad de vehículos actuales y disponibilidad del parqueadero");
         System.out.println("6 - Mostrar estado de un sensor específico");
         System.out.println("7 - Mostrar estado de todos los sensores");
@@ -62,17 +62,17 @@ public class Principal {
                         }
                         
                         System.out.println("Ingrese el piso donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los pisos para parquear van del 0 al " + (pisos-1));
+                        System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
                         int piso = scan.nextInt();
                         System.out.println(" ");
                         System.out.println("Ingrese el espacio donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los espacios para parquear van del 0 al " + (espacios-1));
+                        System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
                         int espacio = scan.nextInt();
                         System.out.println(" ");
                         
                         if(piso < pisos && espacio < espacios && piso >= 0 && espacio >= 0){
                             
-                            if(Sensor.sensores[piso][espacio].getEstado() == 1){
+                            if(Sensor.sensores[piso][espacio].getEstado()==1){
                                 System.out.println("Este espacio está ocupado. No se puede parquear");
                                 
                             } else {
@@ -104,17 +104,17 @@ public class Principal {
                         }
                         
                         System.out.println("Ingrese el piso donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los pisos para parquear van del 0 al " + (pisos-1));
+                        System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
                         int piso2 = scan.nextInt();
                         System.out.println(" ");
                         System.out.println("Ingrese el espacio donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los espacios para parquear van del 0 al " + (espacios-1));
+                        System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
                         int espacio2 = scan.nextInt();
                         System.out.println(" ");
                         
                         if(piso2 < pisos && espacio2 < espacios && piso2 >= 0 && espacio2 >= 0){
                             
-                            if(Sensor.sensores[piso2][espacio2].getEstado() == 1) {
+                            if(Sensor.sensores[piso2][espacio2].getEstado()==1) {
                                 System.out.println("Este espacio está ocupado. No se puede parquear");
                                 
                             } else {
@@ -135,11 +135,11 @@ public class Principal {
                                 System.out.println("Vehículo parqueado en el piso " + piso2 + ", espacio " + espacio2 + ": " + Vehiculo.vehiculos[piso2][espacio2].toString());   
                             }
                             
-                            } else {
+                        } else {
                             System.out.println("Espacio o piso inválido");
-                            }
+                        }
                         
-                            break;
+                        break;
                         
                         case 4: 
                             System.out.println(Vehiculo.toStringVehiculos());
@@ -153,11 +153,11 @@ public class Principal {
                         
                         case 6:
                             System.out.println("Ingrese el piso del parqueadero que desea consultar:");
-                            System.out.println("Recuerde que los pisos van del 0 al " + (pisos-1));
+                            System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
                             int piso3 = scan.nextInt();
                             System.out.println(" ");
                             System.out.println("Ingrese el espacio del parqueadero que desea consultar:");
-                            System.out.println("Recuerde que los espacios van del 0 al " + (espacios-1));
+                            System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
                             int espacio3 = scan.nextInt();
                             System.out.println(" ");
                         
@@ -189,7 +189,7 @@ public class Principal {
                         case 9:
                             String orden = "Vehículos ordenados por valor comercial:";
                             for(int i = 0; i < Vehiculo.valoresOrdenados(Vehiculo.cantidad).length ; i++){
-                                orden = orden + " " + Vehiculo.valoresOrdenados(Vehiculo.cantidad)[i].toString();
+                                orden = orden + Vehiculo.valoresOrdenados(Vehiculo.cantidad)[i].toString();
                             }
                         
                             if (orden.equals("Vehículos ordenados por valor comercial:")) {
@@ -197,7 +197,19 @@ public class Principal {
         
                             System.out.println(orden);
                             break; 
-                            
+                        case 10:
+                        System.out.println("1 - Mostrar sensores desocupados");
+                        System.out.println("2 - Parquear vehículo sin valor comercial");
+                        System.out.println("3 - Parquear vehículo con valor comercial");
+                        System.out.println("4 - Mostrar información de todos vehículos almacenados actualmente");
+                        System.out.println("5 - Mostrar cantidad de vehículos actuales y disponibilidad del parqueadero");
+                        System.out.println("6 - Mostrar estado de un sensor específico");
+                        System.out.println("7 - Mostrar estado de todos los sensores");
+                        System.out.println("8 - Mostrar los vehículos del mismo color");
+                        System.out.println("9 - Mostrar vehículos ordenados por valor comercial");
+                        System.out.println("0 - Salir del programa");
+
+                            break;
                         default: 
                             System.out.println("Comando incorrecto");
                             break;                   
@@ -211,6 +223,7 @@ public class Principal {
             System.out.println(" ");
             System.out.println(" ");
             System.out.println("Ingrese una nueva opción del menú:");
+            System.out.println("Para volver a ver el menú ingrese 10.");
             accion = scan.nextInt();
             System.out.println(" ");
            
