@@ -31,7 +31,7 @@ public class Principal {
         Vehiculo.tamano = pisos*espacios;
         
         System.out.println("Ingrese el numero de la acción que desea realizar:");
-        System.out.println("1 - Mostrar sensores desocupados");
+        System.out.println("1 - Mostrar sensores libres");
         System.out.println("2 - Parquear vehículo sin valor comercial");
         System.out.println("3 - Parquear vehículo con valor comercial");
         System.out.println("4 - Mostrar información de todos vehículos almacenados actualmente");
@@ -62,11 +62,11 @@ public class Principal {
                         }
                         
                         System.out.println("Ingrese el piso donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
+                        System.out.println("Recuerde que los pisos para parquear van del 0 al " + (pisos-1));
                         int piso = scan.nextInt();
                         System.out.println(" ");
                         System.out.println("Ingrese el espacio donde desea parquear el vehículo: ");
-                        System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
+                        System.out.println("Recuerde que los espacios para parquear van del 0 al " + (espacios-1));
                         int espacio = scan.nextInt();
                         System.out.println(" ");
                         
@@ -153,11 +153,11 @@ public class Principal {
                         
                         case 6:
                             System.out.println("Ingrese el piso del parqueadero que desea consultar:");
-                            System.out.println("Recuerde que los pisos disponibles para parquear van del 0 al " + (pisos-1));
+                            System.out.println("Recuerde que los pisos van del 0 al " + (pisos-1));
                             int piso3 = scan.nextInt();
                             System.out.println(" ");
                             System.out.println("Ingrese el espacio del parqueadero que desea consultar:");
-                            System.out.println("Recuerde que los espacios disponibles para parquear van del 0 al " + (espacios-1));
+                            System.out.println("Recuerde que los espacios van del 0 al " + (espacios-1));
                             int espacio3 = scan.nextInt();
                             System.out.println(" ");
                         
@@ -197,19 +197,20 @@ public class Principal {
         
                             System.out.println(orden);
                             break; 
+                        
                         case 10:
-                        System.out.println("1 - Mostrar sensores desocupados");
-                        System.out.println("2 - Parquear vehículo sin valor comercial");
-                        System.out.println("3 - Parquear vehículo con valor comercial");
-                        System.out.println("4 - Mostrar información de todos vehículos almacenados actualmente");
-                        System.out.println("5 - Mostrar cantidad de vehículos actuales y disponibilidad del parqueadero");
-                        System.out.println("6 - Mostrar estado de un sensor específico");
-                        System.out.println("7 - Mostrar estado de todos los sensores");
-                        System.out.println("8 - Mostrar los vehículos del mismo color");
-                        System.out.println("9 - Mostrar vehículos ordenados por valor comercial");
-                        System.out.println("0 - Salir del programa");
-
+                            System.out.println("1 - Mostrar sensores libres");
+                            System.out.println("2 - Parquear vehículo sin valor comercial");
+                            System.out.println("3 - Parquear vehículo con valor comercial");
+                            System.out.println("4 - Mostrar información de todos vehículos almacenados actualmente");
+                            System.out.println("5 - Mostrar cantidad de vehículos actuales y disponibilidad del parqueadero");
+                            System.out.println("6 - Mostrar estado de un sensor específico");
+                            System.out.println("7 - Mostrar estado de todos los sensores");
+                            System.out.println("8 - Mostrar los vehículos del mismo color");
+                            System.out.println("9 - Mostrar vehículos ordenados por valor comercial");
+                            System.out.println("0 - Salir del programa");
                             break;
+                        
                         default: 
                             System.out.println("Comando incorrecto");
                             break;                   
