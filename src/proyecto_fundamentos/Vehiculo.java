@@ -132,12 +132,14 @@ public class Vehiculo {
         
         Vehiculo temp = new Vehiculo();
         
-        for(int i = 0; i < (ordenValor.length -1); i++){
-             if(ordenValor[i].getValorComercial() > ordenValor[i+1].getValorComercial()){
-                temp = ordenValor[i];
-                ordenValor[i] = ordenValor[i+1];
-                ordenValor[i+1] = temp; 
-            }
+        for(int i = 1; i < ordenValor.length; i++) { 
+            for(int j = 0; j < (ordenValor.length -i); j++){
+                 if(ordenValor[j].getValorComercial() > ordenValor[j+1].getValorComercial()){
+                    
+                     temp = ordenValor[j];
+                    ordenValor[j] = ordenValor[j+1];
+                    ordenValor[j+1] = temp; 
+                }
         }
         
         return ordenValor;
