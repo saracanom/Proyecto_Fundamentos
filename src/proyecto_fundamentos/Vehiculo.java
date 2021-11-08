@@ -139,10 +139,10 @@ public class Vehiculo {
                      temp = ordenValor[j];
                     ordenValor[j] = ordenValor[j+1];
                     ordenValor[j+1] = temp; 
-                }
+                 }
+            }
         }
         
-        return ordenValor;
+       return ordenValor;
     }
-   
 }
